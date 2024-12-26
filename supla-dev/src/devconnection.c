@@ -290,7 +290,7 @@ void devconnection_execute(void *user_data, void *sthread) {
       supla_write_state_file(scfg_string(CFG_STATE_FILE), LOG_DEBUG,
                              "Connecting...");
 
-      if (ssocket_client_connect(dcd.ssd, scfg_string(CFG_STATE_FILE), NULL) ==
+      if (ssocket_client_connect(dcd.ssd, scfg_string(CFG_STATE_FILE), NULL, 0) ==
           0) {
         usleep(5000000);
 
